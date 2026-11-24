@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чат — лабораторная №6</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/chat.js" defer></script>
+</head>
+<body><main>
+  <header><p class="eyebrow">ЛАБОРАТОРНАЯ №6 / ВАРИАНТ 2</p>
+    <nav aria-label="Навигация"><a href="/api/info">JSON</a><a href="/docs">Документация API</a></nav>
+  </header>
+  <h1>Общий чат</h1>
+  <p>Откройте чат в двух вкладках и войдите под разными именами.</p>
+  <form id="join-form">
+    <label for="chat-name">Ваше имя</label>
+    <input id="chat-name" name="name" maxlength="50" required autocomplete="nickname">
+    <button id="connect" type="submit">Войти в чат</button>
+    <button id="disconnect" class="secondary" type="button" disabled>Выйти</button>
+  </form>
+  <p id="status" role="status">Нет подключения</p>
+  <ol id="messages" class="messages" aria-label="Сообщения" aria-live="polite"></ol>
+  <form id="message-form">
+    <label for="message">Сообщение</label>
+    <input id="message" name="message" maxlength="1000" required disabled autocomplete="off">
+    <button id="send" type="submit" disabled>Отправить</button>
+  </form>
+  <footer>Мовчан Александр Дмитриевич · группа 221341</footer>
+</main></body>
+</html>

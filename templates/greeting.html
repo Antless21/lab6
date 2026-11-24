@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Приветствие — лабораторная №6{% endblock %}
+{% block content %}
+<h1>Давайте познакомимся</h1>
+<p>Введите имя, чтобы получить персональное приветствие.</p>
+<form method="post" action="{{ url_for('greeting') }}">
+  <label for="name">Ваше имя</label>
+  <input id="name" name="name" value="{{ name }}" maxlength="50" required autocomplete="given-name">
+  <button type="submit">Поздороваться</button>
+</form>
+{% if error %}<p class="error" role="alert">{{ error }}</p>
+{% elif name %}<p class="notice" role="status">Привет, {{ name }}!</p>{% endif %}
+{% endblock %}

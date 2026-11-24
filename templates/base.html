@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Лабораторная №6{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">ЛАБОРАТОРНАЯ №6 / ВАРИАНТ 2</p>
+      <nav aria-label="Навигация"><a href="{{ url_for('greeting') }}">Приветствие</a>
+        <a href="{{ url_for('students') }}">Таблица студентов</a></nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>Мовчан Александр Дмитриевич · группа 221341</footer>
+  </main>
+</body>
+</html>
